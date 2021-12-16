@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export const LoginScreen = () => {
     return (
         <>
-            <h3 className='auth__title'>Login</h3>
+            <h3 className='auth__title'>Iniciar sesión</h3>
             <form>
                 <input
                     type="text"
@@ -33,7 +33,7 @@ export const LoginScreen = () => {
                 <hr />
 
                 <div className='auth__social-networks'>
-                    <p>Login with social networks</p>
+                    <p>Iniciar sesión con redes sociales</p>
 
                     <div
                         className="google-btn"
@@ -49,9 +49,10 @@ export const LoginScreen = () => {
 
                 <Link
                     to="/auth/register"
+                    className='link'
 
                 >
-                    Create new Account
+                    Crear nueva cuenta 
                 </Link>
 
             </form>
