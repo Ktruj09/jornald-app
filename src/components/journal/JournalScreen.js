@@ -1,4 +1,6 @@
 import React from 'react';
+import { NoteScreen } from '../note/NoteScreen';
+import { NothingSelected } from './NothingSelected';
 import { Sidebar } from './Sidebar';
 
 
@@ -11,7 +13,14 @@ export const JournalScreen = () =>{
                 <Sidebar/>
 
                 <main>
-                    <h1> Main Content</h1>
+                    {/**este componente será mostrado, si el usuario no tiene 
+                     * nada seleccionado.
+                     */}
+                  {/** <NothingSelected/>*/}  
+
+                 <NoteScreen/>
+
+
                 </main>
             </div>
         </>

@@ -1,0 +1,55 @@
+.note__main-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.notes__appbar{
+    display: flex;
+    align-items: center;
+    //divide toda la pantalla pone la fecha al inicio y el boton imagen y guardar 
+    //lo envia hasta el fondo dejando un espacio en medio
+    justify-content: space-between;
+    background-color: $primary;
+    color: $white;
+    padding: 10px, 20px, 10px, 20px;
+    
+}
+
+//nuevos estilos realizados en el contenido principal 
+.notes__content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+}
+
+.notes_title-input, .notes__textearea{
+    border: none;
+
+    &:focus{
+        outline: none;
+    }
+
+}
+
+.notes_title-input{
+    color: $dark-grey;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.notes__textearea{
+    border: none;
+    color: $dark-grey;
+    font-size: 20px;
+    flex: 1 1 auto;
+    resize: none;
+}
+
+.notes__image img{
+    box-shadow: 5px 5px $dark-grey;
+    height: 150px;
+
+}

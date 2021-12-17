@@ -1,4 +1,5 @@
 import React from 'react';
+import { JornalEntries } from './JornalEntries';
 
 
 export const Sidebar = () => {
@@ -30,6 +31,8 @@ export const Sidebar = () => {
                               Nueva Entrada
                          </p>
                 </div>
+
+                <JornalEntries/>
             </aside>
         </>
     )
