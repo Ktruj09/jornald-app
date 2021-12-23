@@ -5,6 +5,7 @@ import thunk from "redux-thunk";
 
 //importación de componentes
 import { authReducer } from "../reducer/authReducer";
+import { uiReducer } from "../reducer/uiReducer";
 
 
 //esto habilita las extensiones del devtools y tambien a poder 
@@ -18,7 +19,8 @@ const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOO
 //con esta función podemos mandar más de un reducer 
 
 const reducers = combineReducers({
-    auth: authReducer
+    auth: authReducer,
+    uid: uiReducer
 })
 
 //ahora una vez esto definido, tenemos que importarlo 
