@@ -1,6 +1,7 @@
-import { getAuth, signInWithPopup  } from 'firebase/auth'
 
-import { googleProvider} from '../../firebase/firabese-config'
+import { getAuth, signInWithPopup, createUserWithEmailAndPassword, updateProfile  } from 'firebase/auth'
+
+import {  googleProvider} from '../../firebase/firabese-config'
 import { types } from '../types/types'
 
 
@@ -15,6 +16,28 @@ export const startLogin = (email, password) => {
     }
 
 }
+
+
+//función que servirá para el registro del usuario
+export const StartRegister = (email, password, name) =>{
+
+    return (dispatch) =>{
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password, name)
+            .then(async ({user}) =>{
+                //acá asignamos el name a nuestro display name.
+                await updateProfile(auth.currentUser, {displayName: name})
+              console.log(user)
+                dispatch(
+                    login(user.uid, user.displayName)
+                )
+            })
+
+            .catch((err) =>console.error(err))
+    }
+
+}
+
 
 //inicio de sesión con google
 export const startGoogleLogin = () =>{
